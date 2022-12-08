@@ -1,12 +1,14 @@
 const mongoose = require("mongoose")
 const crptoSchema = new mongoose.Schema({
+
+
     symbol: {
         type: String,
-        // unique: true,
+        unique: true,
     },
     name: {
         type: String,
-        // unique: true,
+        unique: true,
     },
     marketCapUsd: {
         type: String,
@@ -15,25 +17,9 @@ const crptoSchema = new mongoose.Schema({
         type: String,
     },
 })
+
+
 module.exports = mongoose.model('Crypto', crptoSchema)
 
 
 
-// const mongoose = require("mongoose")
-// const crptoSchema = new mongoose.Schema({
-//     symbol: {
-//         type: String,
-        //unique: true,
-//     },
-//     name: {
-//         type: String,
-        // unique: true,
-//     },
-//     marketCapUsd: {
-//         type: String,
-//     },
-//     priceUsd: {
-//         type: String,
-//     },
-// })
-// module.exports = mongoose.model('coinModel', crptoSchema)
